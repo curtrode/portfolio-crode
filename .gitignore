@@ -1,2 +1,5 @@
 # macOS Finder metadata — not part of the website
 .DS_Store
+
+# Camera originals — too large to ship; derived crops live in images/
+images/band-84.jpg
