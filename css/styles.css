@@ -19,7 +19,7 @@ img {
    2. DESIGN TOKENS
    ========================== */
 
-   :root {
+:root {
     /* Color */
     --color-bg: #fafafa;
     --color-surface: #ffffff;
@@ -63,22 +63,55 @@ body {
     line-height: var(--leading-body);
 }
 
-h1 { font-size: var(--text-h1); line-height: var(--leading-heading); }
-h2 { font-size: var(--text-h2); line-height: var(--leading-heading); }
-h3 { font-size: var(--text-h3); line-height: var(--leading-heading); }
+h1 {
+    font-size: var(--text-h1);
+    line-height: var(--leading-heading);
+}
 
-h1, h2, h3 { margin-bottom: var(--space-sm); }
-p { margin-bottom: var(--space-md); }
-p:last-child { margin-bottom: 0; }
+h2 {
+    font-size: var(--text-h2);
+    line-height: var(--leading-heading);
+}
 
-a { color: var(--color-accent); }
+h3 {
+    font-size: var(--text-h3);
+    line-height: var(--leading-heading);
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: var(--space-sm);
+}
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: var(--color-accent);
+}
+
+ul {
+    padding-left: var(--space-lg);
+}
+
+
 
 
 /* ==========================
    4. LAYOUT
+   Breakpoints used in this file:
+     768px  — tablet and larger
+   (CSS variables cannot be used inside @media conditions,
+    so breakpoints are documented here instead of tokenized.)
    ========================== */
 
-   body {
+body {
     max-width: var(--page-width);
     margin: 0 auto;
     padding: var(--space-lg) var(--space-md);
@@ -94,7 +127,10 @@ header {
     margin-bottom: var(--space-lg);
 }
 
-.header-text { flex: 1; min-width: 16rem; }
+.header-text {
+    flex: 1;
+    min-width: 16rem;
+}
 
 .header-pic {
     flex: 1;
@@ -117,7 +153,9 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover { color: var(--color-accent); }
+nav a:hover {
+    color: var(--color-accent);
+}
 
 .nav-container {
     display: flex;
@@ -127,7 +165,10 @@ nav a:hover { color: var(--color-accent); }
     gap: var(--space-md);
 }
 
-.nav-links { display: flex; gap: var(--space-lg); }
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+}
 
 .logo {
     font-size: var(--text-h3);
@@ -136,19 +177,21 @@ nav a:hover { color: var(--color-accent); }
     text-decoration: none;
 }
 
-section, aside { margin-bottom: var(--space-xl); }
+section,
+aside {
+    margin-bottom: var(--space-xl);
+}
 
-/* Skills — flex-wrap cards */
+/* Skills — auto-fit grid of cards */
 .skills-grid {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: var(--space-md);
 }
 
 .skill-card {
-    flex: 1;
-    min-width: 12rem;
     padding: var(--space-md);
     background-color: var(--color-surface-alt);
     border-radius: var(--radius-md);
@@ -162,16 +205,39 @@ section, aside { margin-bottom: var(--space-xl); }
     gap: var(--space-lg);
 }
 
-.about-image { flex: 1; min-width: 16rem; }
-.about-image img { width: 100%; border-radius: var(--radius-md); }
-.about-text { flex: 2; min-width: 16rem; max-width: var(--reading-width); }
+.about-image {
+    flex: 1;
+    min-width: 16rem;
+}
 
-/* Projects — bordered cards */
+.about-image img {
+    width: 100%;
+    border-radius: var(--radius-md);
+}
+
+.about-text {
+    flex: 2;
+    min-width: 16rem;
+    max-width: var(--reading-width);
+}
+
+/* Projects — one column on mobile, two at 768px and up */
 .project-list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card.featured {
+        grid-column: span 2;
+    }
 }
 
 .project-card {
