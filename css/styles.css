@@ -27,6 +27,7 @@ img {
     --color-muted: #6b7280;
     --color-accent: #0369a1;
     --color-surface-alt: #f1f5f9;
+    --color-border: #e5e7eb;
 
     /* Spacing — a modular scale */
     --space-sm: 0.5rem;
@@ -47,6 +48,7 @@ img {
     --page-width: 64rem;
     --reading-width: 70ch;
     --radius-md: 8px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ==========================
@@ -84,6 +86,7 @@ a { color: var(--color-accent); }
 
 header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: var(--space-lg);
     padding: var(--space-lg);
@@ -91,10 +94,11 @@ header {
     margin-bottom: var(--space-lg);
 }
 
-.header-text { flex: 1; }
+.header-text { flex: 1; min-width: 16rem; }
 
 .header-pic {
     flex: 1;
+    min-width: 16rem;
     background-color: var(--color-surface);
     min-height: 18rem;
     border-radius: var(--radius-md);
@@ -111,9 +115,69 @@ nav {
 nav a {
     color: var(--color-text);
     text-decoration: none;
-    margin-right: var(--space-lg);
 }
 
 nav a:hover { color: var(--color-accent); }
 
-section { margin-bottom: var(--space-xl); }
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.nav-links { display: flex; gap: var(--space-lg); }
+
+.logo {
+    font-size: var(--text-h3);
+    font-weight: bold;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+section, aside { margin-bottom: var(--space-xl); }
+
+/* Skills — flex-wrap cards */
+.skills-grid {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.skill-card {
+    flex: 1;
+    min-width: 12rem;
+    padding: var(--space-md);
+    background-color: var(--color-surface-alt);
+    border-radius: var(--radius-md);
+}
+
+/* About — image column + text column */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.about-image { flex: 1; min-width: 16rem; }
+.about-image img { width: 100%; border-radius: var(--radius-md); }
+.about-text { flex: 2; min-width: 16rem; max-width: var(--reading-width); }
+
+/* Projects — bordered cards */
+.project-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.project-card {
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}

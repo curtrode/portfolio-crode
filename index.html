@@ -10,9 +10,13 @@
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+<nav class="nav-container">
+    <a href="index.html" class="logo">Curt Rode</a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
 </nav>
 
 <header>
@@ -36,16 +40,18 @@
         
     </section>
 
-    <section>
-        <h2>About Me</h2>
-        <p>I am building this portfolio alongside the students in WRIT 40363 this term, one lab at a time, in the same order they do. <strong>When something breaks here, it is usually breaking in their files too.</strong></p>
-
-        <figure>
-            <img src="images/silt_salt.png" alt="Heavily blurred black letterforms on a cream background, with small buttons above them reading fluid, ripple, touch, sound, and tension">
-            <figcaption>A screenshot from For Once Again, one of my digital literature pieces.</figcaption>
-        </figure>
-
-         
+    <section class="about">
+        <div class="about-image">
+            <figure>
+                <img src="images/silt_salt.png" alt="Heavily blurred black letterforms on a cream background, with small buttons above them reading fluid, ripple, touch, sound, and tension">
+                <figcaption>A screenshot from For Once Again, one of my digital literature pieces.</figcaption>
+            </figure>
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>I am building this portfolio alongside the students in WRIT 40363 this term, one lab at a time, in the same order they do. <strong>When something breaks here, it is usually breaking in their files too.</strong></p>
+            <p>Building it live surfaces the places where an instruction is clear to the person who wrote it and ambiguous to everyone else. <a href="about.html">Read the longer version on my About page</a>.</p>
+        </div>
     </section>
 
 
