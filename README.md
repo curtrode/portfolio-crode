@@ -21,8 +21,8 @@ know about the current state:
 
 - The About page still uses the plain header. Matching it to the home page
   header is a change I am holding until a lab makes it the assignment.
-- The project list carries a placeholder second entry. Real projects replace
-  it as the term goes on.
+- The project list holds a single entry so far — this site itself. More
+  projects join it as the term goes on.
 
 Camera originals stay out of the repository; only the downsized crops in
 `images/` are committed.
