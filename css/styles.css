@@ -257,3 +257,8 @@ aside {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
 }
+
+.project-card img {
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius-md);
+}
