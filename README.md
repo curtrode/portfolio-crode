@@ -21,9 +21,10 @@ know about the current state:
 
 - The About page still uses the plain header. Matching it to the home page
   header is a change I am holding until a lab makes it the assignment.
-- The project list holds two entries, this site and *For Once, Again,
-  Something*, a piece of digital literature. They sit side by side beneath a
-  full-width Coming Soon card. More projects join it as the term goes on.
+- The project list holds three entries. The Local Favorites Tracker (Project
+  2) is the full-width featured card; this site and *For Once, Again,
+  Something*, a piece of digital literature, sit side by side beneath it.
+  More projects join them as the term goes on.
 
 Camera originals stay out of the repository; only the downsized crops in
 `images/` are committed.
